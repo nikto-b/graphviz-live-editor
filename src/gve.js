@@ -33,21 +33,21 @@ const init = () => {
     gv.addImage(img.text.replace('"', ""), "100px", "100px");
   }
   
-  document.getElementById("single-svg").addEventListener("click", (e) => {
+  document.getElementById("single-svg").parentNode.addEventListener("click", (e) => {
     const allImages = getAllImages(cm.getValue());
     const replaced = toDataURLs(allImages, toDataURLs, "image/png", [], document.getElementById("graph").innerHTML, saveBlob(b => saveAs(b, "graph.svg")))
     //
   });
-  document.getElementById("zippy").addEventListener("click", (e) => {
+  document.getElementById("zippy").parentNode.addEventListener("click", (e) => {
     const dot = cm.getValue()
     const allImages = getAllImages(dot);
     const replaced = toDataURLs(allImages, toDataURLs, "image/png", [], document.getElementById("graph").innerHTML, saveBlob( b => zippy(b, dot)))
     
   });
-  document.getElementById("info-menu").addEventListener("click", () => {
+  document.getElementById("info-menu").parentNode.addEventListener("click", () => {
     document.getElementById("info").classList.toggle("hidden")
   })
-  document.getElementById("get-example").addEventListener("click", () => {
+  document.getElementById("get-example").parentNode.addEventListener("click", () => {
     cm.getDoc().setValue(example)
     document.getElementById("menu-open").checked = false
   })
