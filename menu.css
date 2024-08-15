@@ -87,6 +87,7 @@ h1 {
 .menu-item:hover {
   background: white;
   color: #000;
+  cursor: pointer;
 }
 .menu-item:nth-child(3) {
   transition-duration: 70ms;

@@ -74,6 +74,7 @@ li {
 #close {
   position: relative;
   float: right;
+  cursor: pointer;
 }
 
 .visible {
